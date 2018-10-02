@@ -10,9 +10,6 @@
  -- hide the status bar 
  display.setStatusBar(display.HiddenStatusBar)
 
--- sets the backround colour
-  display.setDefault("background", 255/255, 27/255, 156/255)
-
 -- create a local varible 
   local textObject
  
@@ -22,4 +19,4 @@
 
 --sets the color of the text
   textObject:setTextColor(18/255, 47/255, 100/255)
-
+ 
