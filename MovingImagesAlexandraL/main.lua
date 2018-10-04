@@ -30,11 +30,12 @@ beetleship.y = display.contentHeight/3
 -- Output:none
 -- Description: This function adds the scroll speed to the x-value of the ship
 local function MoveShip(event)
--- add the scroll speed to the x-value of the ship
-beetleship.x = beetleship.x + scrollSpeed 
--- change the transparency of the ship every time it moves so that it fades out
-beetleship.alpha = beetleship.alpha + 0.01 
+	-- add the scroll speed to the x-value of the ship
+	beetleship.x = beetleship.x + scrollSpeed 
+	-- change the transparency of the ship every time it moves so that it fades out
+	beetleship.alpha = beetleship.alpha + 0.01 
 end  
+
 -- MoveShip will be called over and over again
 Runtime:addEventListener("enterFrame", MoveShip)
 
@@ -47,4 +48,18 @@ star.alpha = 1
 
 -- set the initial image x and y position of star
 star.x = 0
-star.y = display.contentHeight3/3
+star.y = display.contentHeight* 2/3
+
+-- Function: Moveship
+-- Input: this functionj accepts an event listener
+-- Output: none
+-- Description: this function adds the scroll speed to the x-value of the ship
+ local function MoveStar(event)
+		-- add the scroll speed to the x-value of the ship
+	star.x = star.x + scrollSpeed
+	-- chandge the transparency of the ship everytime it moves so that it fades out
+	star.alpha = star.alpha - 0.00001
+ end
+
+ -- moveStar will be called over and over again
+ Runtime:addEventListener("enterFrame", MoveStar) 
